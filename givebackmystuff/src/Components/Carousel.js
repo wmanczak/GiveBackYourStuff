@@ -59,15 +59,17 @@ const useStyles = makeStyles((theme) => ({
         minHeight: 200,
     },
     sliderStyle: {
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"space-between",
-        borderBottom: "2px solid black"
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        borderBottom: "2px solid black",
+        margin:"0px 60px"
     },
     sliderStyle2: {
-        display:"flex",
-        alignItems:"center",
-        justifyContent:"space-between",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        margin:"0px 60px"
 
     },
 
@@ -133,21 +135,21 @@ export default function FloatingActionButtonZoom() {
                     onChangeIndex={handleChangeIndex}
                 >
                     <TabPanel value={value} index={0} dir={theme.direction}>
-                        <p style={{width: 400}}>
-                            W naszej bazie znajdziesz liste zweryfikowanych Fundacji, z
-                            ktorymi wspolpracujemy. mozesz sprawdzic czym sie zajmuja komu pomagaja i czego
-                            potrzebuja
-                        </p>
+                        <div style={{marginLeft: "25%"}}>
+
+                            <p style={{width: 400, textAlign: "center"}}>
+                                W naszej bazie znajdziesz liste zweryfikowanych Fundacji, z
+                                ktorymi wspolpracujemy. mozesz sprawdzic czym sie zajmuja komu pomagaja i czego
+                                potrzebuja
+                            </p>
+                        </div>
                         <Slider dots>
                             <div>
-                                <h3>1</h3>
 
                             </div>
                             <div>
-                                <h3>2</h3>
                             </div>
                             <div>
-                                <h3>3</h3>
                             </div>
 
                         </Slider>
@@ -165,7 +167,7 @@ export default function FloatingActionButtonZoom() {
                         </div>
                         <Slider dots>
                             <div>
-                                <div  className={classes.sliderStyle}>
+                                <div className={classes.sliderStyle}>
                                     <div>
                                         <h3>Organizacja "Lorem Ipsum 1"</h3>
                                         <p>quis varius quam quisque id diam vel quam elementum pulvinar</p>
@@ -202,17 +204,48 @@ export default function FloatingActionButtonZoom() {
                         </Slider>
                     </div>
                     <TabPanel value={value} index={2} dir={theme.direction}>
-                        <p style={{width: 400}}>
-                            W naszej bazie znajdziesz liste zweryfikowanych Fundacji, z
-                            ktorymi wspolpracujemy. mozesz sprawdzic czym sie zajmuja komu pomagaja i czego
-                            potrzebuja
-                        </p>
-                        <Slider dots>
+                        <div style={{marginLeft: "25%"}}>
+                            <p style={{width: 400, textAlign: "center"}}>
+                                W naszej bazie znajdziesz liste zweryfikowanych Fundacji, z
+                                ktorymi wspolpracujemy. mozesz sprawdzic czym sie zajmuja komu pomagaja i czego
+                                potrzebuja
+                            </p>
+                        </div>
+                        <div>
+                            <div className={classes.sliderStyle}>
+                                <div>
+                                    <h3>Zbiorka "Lorem Ipsum 1"</h3>
+                                    <p>quis varius quam quisque id diam vel quam elementum pulvinar</p>
+                                </div>
+                                <span>Egestas,sed, tempus</span>
+
+                            </div>
                             <div>
+                                <div className={classes.sliderStyle}>
+                                    <div>
+                                        <h3>Zbiorka "Lorem Ipsum 2"</h3>
+                                        <p>quis varius quam quisque id diam vel quam elementum pulvinar</p>
+                                    </div>
+                                    <span>Egestas,sed, tempus</span>
+
+                                </div>
+                            </div>
+                            <div>
+                                <div className={classes.sliderStyle2}>
+                                    <div>
+                                        <h3>Zbiorka "Lorem Ipsum 3"</h3>
+                                        <p>quis varius quam quisque id diam vel quam elementum pulvinar</p>
+                                    </div>
+                                    <span>Egestas,sed, tempus</span>
+
+                                </div>
                             </div>
 
+                        </div>
+                        <div>
+                        </div>
 
-                        </Slider>
+
                     </TabPanel>
                 </SwipeableViews>
 
