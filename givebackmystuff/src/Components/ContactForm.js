@@ -124,6 +124,7 @@ const ContactForm = () => {
                                                     padding: ".5rem",
                                                     fontSize: "16px",
                                                     display: "block",
+
                                                 }}
 
 
@@ -168,7 +169,7 @@ const ContactForm = () => {
                                     }}>
 
                                     <TextField
-                                        label="Wpisz swojego maila"
+                                        label="Wpisz swoja wiadomosc"
                                         id="message"
                                         multiline
                                         rows={2}

@@ -15,6 +15,7 @@ import UpIcon from '@material-ui/icons/KeyboardArrowUp';
 import {green} from '@material-ui/core/colors';
 import Box from '@material-ui/core/Box';
 import Slider from 'infinite-react-carousel';
+import Logo from "../images/Decoration.svg"
 
 const TabPanel = (props) => {
     const {children, value, index, ...other} = props;
@@ -57,12 +58,15 @@ const useStyles = makeStyles((theme) => ({
         width: 900,
         position: 'relative',
         minHeight: 200,
+        color: "#3C3C3C",
+        fontFamily: `'Open Sans', sans-serif`,
+
     },
     sliderStyle: {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        borderBottom: "2px solid black",
+        borderBottom: "2px solid grey",
         margin:"0px 60px"
     },
     sliderStyle2: {
@@ -70,6 +74,14 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "space-between",
         margin:"0px 60px"
+
+    },
+    textStyle: {
+        fontSize: "1.5em",
+        textAlign: "center",
+        fontFamily: `'Open Sans', sans-serif`,
+        color: "#737373",
+        fontWeight: 500,
 
     },
 
@@ -114,6 +126,10 @@ export default function FloatingActionButtonZoom() {
     return (
         <section className={classes.sectionStyle}>
             <div className={classes.root}>
+                <div className={classes.textStyle}>
+                    <p>Komu pomagamy?</p>
+                    <img src={Logo}/>
+                </div>
                 <Tabs
                     value={value}
                     onChange={handleChange}
@@ -145,9 +161,35 @@ export default function FloatingActionButtonZoom() {
                         </div>
                         <Slider dots>
                             <div>
+                                <div className={classes.sliderStyle}>
+                                    <div>
+                                        <h3>Fundacja "Dbam o Zdrowie"</h3>
+                                        <p>Cel i misja: Pomoc osobom znajdujcym sie w trudnej sytuacji zyciowej</p>
+                                    </div>
+                                    <span>ubrania, jedzenie, sprzet AGD, meble, zabawki</span>
 
-                            </div>
-                            <div>
+                                </div>
+                                <div>
+                                    <div className={classes.sliderStyle}>
+                                        <div>
+                                            <h3>Fundacja "Dla dzieci"</h3>
+                                            <p>Cel i misja: Pomoc dzieciom z ubogich rodzin</p>
+                                        </div>
+                                        <span>ubrania, meble, zabawki</span>
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className={classes.sliderStyle2}>
+                                        <div>
+                                            <h3>Fundacja "Bez domu"</h3>
+                                            <p>Cel i misja: Pomoc dla osb nie posiadajacych miejsca zamieszkania</p>
+                                        </div>
+                                        <span>ubrania, jedzenie, cieple koce</span>
+
+                                    </div>
+                                </div>
+
                             </div>
                             <div>
                             </div>

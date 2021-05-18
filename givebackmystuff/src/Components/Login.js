@@ -28,6 +28,11 @@ const newStyles = makeStyles({
         display: "flex",
         flexDirection: "column",
     },
+    signStyle:{
+        border: "1px solid #737373 ",
+        padding:"5px"
+
+    }
 
 
 })
@@ -54,13 +59,13 @@ const LoginNew = (props) => {
                     {hasAccount ? (
                     <>
                         <Button variant="outlined" size="large" onChange={handleLogin} > Sign in</Button>
-                        <p> Don't have an account ? <span onClick={()=>setHasAccount(!hasAccount)}>Sign up</span></p>
+                        <p> Don't have an account ? <span className={classes.signStyle} onClick={()=>setHasAccount(!hasAccount)} >Sign up</span></p>
 
                         </>
                     ) : (
                         <>
-                            <Button variant="outlined" size="large"  onClick={handleSignUp}>Sign up</Button>
-                            <p>Have an account > <span onClick={()=>setHasAccount(!hasAccount)}>Sign in</span></p>
+                            <Button variant="outlined" size="large"  onClick={handleSignUp} >Sign up</Button>
+                            <p >Have an account > <span className={classes.signStyle} onClick={()=>setHasAccount(!hasAccount)}  >Sign in</span></p>
 
                         </>
                     )}
