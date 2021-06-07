@@ -102,7 +102,6 @@ const ContactForm = () => {
 
                                 }}>
                                 <form onSubmit={handleSubmit}
-                                      style={{}}
                                 >
                                     <div className={classes.formStyle}>
                                         <div>

@@ -22,7 +22,7 @@ const AppRouter = () => {
             <AboutUs/>
             <ContactForm/>
             <FloatingActionButtonZoom/>
-            <LoggingView/>
+            {/*<LoggingView/>*/}
             <MainFooter/>
             <Switch>
                 <Route exact path="/">

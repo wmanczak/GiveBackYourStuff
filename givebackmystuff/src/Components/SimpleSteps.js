@@ -17,6 +17,7 @@ const newStyles = makeStyles({
         fontFamily: `'Open Sans', sans-serif`,
         color: "#737373",
         fontWeight: 500,
+        margin: "80px 0px"
 
     },
     divStyle: {
@@ -35,7 +36,8 @@ const newStyles = makeStyles({
     },
     div2Style: {
         display: "flex",
-        justifyContent: "center"
+        justifyContent: "center",
+        marginTop: 50,
 
     },
     div3style: {},
